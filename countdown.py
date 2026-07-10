@@ -5,4 +5,7 @@ class CountdownTimer:
             raise TypeError("Input must be an integer")
         if n > 10000000:
             raise ValueError("Input too large to process")
+        if n <= 0:
+            raise ValueError("Input must be a positive integer")
         return list(range(n, -1, -1))
+    
